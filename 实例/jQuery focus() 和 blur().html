@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>镜心的小树屋(jxdxsw.com)</title>
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" >
+	</script>
+	<script>
+		$(document).ready(function() {
+			$("input").focus(function() {
+			/* Act on the event */
+			$(this).css(
+			
+				"backgroundColor","#cccccc"
+			);
+			});
+			$("input").blur(function(){
+				$(this).css("backgroundColor","#ffffff");
+			})
+		});
+	</script>
+</head>
+<body>
+Name:<input type="text" name="fullname"><br>
+Email:<input type="text" name="email" >
+	
+</body>
+</html>

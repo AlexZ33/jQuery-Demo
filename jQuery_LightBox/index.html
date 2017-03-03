@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lightbox插件开发</title>
+	<link rel="stylesheet" type="text/css" href="css/lightbox.css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<!-- <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.js" type="text/javascript" charset="utf-8" ></script> -->
+	<script src="js/lightbox.js" type="text/javascript"></script>
+</head>
+<body>
+ class="js-lightbox"  表示这个元素要启用lightbox <br>
+ data-role="lightbox" 表示这个元素要启用lightbox <br> 
+ data-source="../jQuery_LightBox/pic/95c5511063d704cb502f4670f8c70f2.jpg" 原图的地址 <br>
+ data-group="group-2"  标识当前是否属于一个组别 <br>
+ data-id="pic-2-1"     图片的唯一标识 <br>
+ data-caption="我第二组第一"  当前图片的描述文字 <br>
+
+<h1>1组图片</h1>
+
+<div>
+	<img class="js-lightbox"  data-role="lightbox"  data-source="../jQuery_LightBox/pic/4f76cb4190661fb4777fa7a9748dd93.jpg" src="../jQuery_LightBox/pic/4f76cb4190661fb4777fa7a9748dd93.jpg" data-group="group-1" data-id="pic-1" data-caption="我第一" width="100" height="100" >
+	<img class="js-lightbox"  data-role="lightbox"  data-source="../jQuery_LightBox/pic/4f76cb4190661fb4777fa7a9748dd93.jpg" src="../jQuery_LightBox/pic/6205d3bdfd851496f7f4e3797e66a71.jpg" data-group="group-1" data-id="pic-2" data-caption="我第二" width="100" height="100" >
+	<img class="js-lightbox"  data-role="lightbox"  data-source="../jQuery_LightBox/pic/668d30657608ad6b141e8a73e765f96.jpg" src="../jQuery_LightBox/pic/668d30657608ad6b141e8a73e765f96.jpg" data-group="group-1"
+	data-id="pic-3" data-caption="我第三" width="100" height="100" >
+	<img class="js-lightbox"  data-role="lightbox"  data-source="../jQuery_LightBox/pic/8baa5809a21176975c7fb75b04c5597.jpg" src="../jQuery_LightBox/pic/8baa5809a21176975c7fb75b04c5597.jpg" data-group="group-1"
+	data-id="pic-4" data-caption="我第四" width="100" height="100" >
+</div>
+
+<h1>1组图片</h1>
+<div>
+	<img class="js-lightbox"  data-role="lightbox"  data-source="../jQuery_LightBox/pic/95c5511063d704cb502f4670f8c70f2.jpg" src="../jQuery_LightBox/pic/95c5511063d704cb502f4670f8c70f2.jpg" data-group="group-2" data-id="pic-2-1" data-caption="我第二组第一" width="100" height="100" >
+	
+</div>
+
+<!-- 遮罩 -->
+<!-- 	<div id="G-lightbox-mask"></div> -->
+<!-- 弹出层 -->
+	<!-- <div id="G-lightbox-popup">  -->
+
+		<!-- <div class="lightbox-pic-view">
+			<span class="lightbox-btn lightbox-prevbtn lightbox-prevbtn-show">  </span>
+			<img class="lightbox-image" src="pic/4f76cb4190661fb4777fa7a9748dd93.jpg" style="width=:100px height:300px">
+			<span class="lightbox-btn lightbox-nextbtn  lightbox-nextbtn-show"> </span>
+			
+		</div>
+		<div class="lightbox-pic-caption">
+			<div class="lightbox-caption-area">
+				<p class="lightbox-pic-desc">图片标题</p>
+				<span class="lightbox-of-index">当前索引：1 of 4</span>
+			</div>
+			<span class="lightbox-close-btn"></span>
+		</div> -->
+	</div>
+<script>
+	$(function(){
+		var lightbox = new LightBox();
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>镜心的小树屋(jxdxsw.com)</title>
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" >
+	</script>
+	<script >
+		$(document).ready(function() {
+			$("button").click(function(){
+				$("#div1").load("/test.txt",function(responseText,statusText,xhr){
+					if(statusText=="sucess")
+					alert("外部内容加载成功！");
+					if(statusText=="error")
+						alert("Error:"+xhr.status+":"+xhr.statusText);
+				});
+			});
+			
+		});
+	</script>
+</head>
+<body>
+
+<div id="div1">
+	<h2>使用jquery AJAX修改文本内容</h2>
+</div>
+<button >获取外部内容</button>
+</body>
+</html>
