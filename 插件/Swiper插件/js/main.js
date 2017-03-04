@@ -49,3 +49,22 @@
 // });
 
 
+$(document).ready(function(){
+
+	//$(".container").container();
+
+	$("#slide1").container({
+
+		"autoplayTime"	:1000
+
+	});
+
+	$("#slide2").container({
+		
+		"Autoplay":false,
+		//鼠标滑过时候切换图片   实验
+		
+		"eventType":"mouseover"
+	});
+
+})

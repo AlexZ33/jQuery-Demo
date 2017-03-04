@@ -1,7 +1,17 @@
 //用匿名自执行函数封装
 //fn jquery扩展插件的方法  fn是jquery对象的原型 this相当于$(".container")这个jquery对象
 (function($){
-	$.fn.container = function(){
+	$.fn.container = function(opt){
+		
+		var defaults={
+			"Autoplay":true,
+			"autoplayTime":  2000,
+			"eventType": "click"
+
+		};
+		$.extend(defaults,opt);
+
+
 		return this.each(function(){
 			var me=$(this),
 				ul=me.find(".inner"),
@@ -13,13 +23,11 @@
 
 
 //鼠标在图片上时候停止,鼠标移出时候停止
-	me.hover(function(){
-		clearInterval(timer);
-	},Autoplay);
+	
 
 
 	//点击切换
-	  	  nav.on('click',function(){
+	  	  nav.on(defaults.eventType,function(){
 	  	  	
 	  	  	var me=$(this),
 	  	  		index =me.index();
@@ -35,8 +43,16 @@
 
 
 	//自动切换
+			if (defaults.Autoplay) {
+				me.hover(function(){
 
-			Autoplay();
+					clearInterval(timer);
+					
+				},Autoplay);
+				
+				Autoplay();
+			}
+			
 			function Autoplay(){
 					
 				timer =setInterval(function(){
@@ -46,7 +62,7 @@
 					}
 					nav.eq(iNow).trigger("click");
 
-				},2000);
+				},defaults.autoplayTime);
 			}  	
 
 		});
@@ -56,10 +72,10 @@
 
  
 
- $(document).ready(function(){
+//  $(document).ready(function(){
 
-	$(".container").container();
+// 	$(".container").container();
 
  
 
-});
+// });
