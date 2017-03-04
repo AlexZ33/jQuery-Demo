@@ -9,7 +9,7 @@ $(document).ready(function(){
   	  iNow = 0;
 
 
-//鼠标在图片上时候停止,鼠标移出时候停止
+//鼠标在图片上时候停止,鼠标移出时候自动播放
 	container.hover(function(){
 		clearInterval(timer);
 	},Autoplay);
