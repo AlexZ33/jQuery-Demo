@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>镜心书社</title>
+	<style>
+		.left,
+		.right{
+			width: 300px;
+			height: 120px;
+
+		}
+
+		.left div,
+		.right div{
+			width: 100px;
+			height: 90px;
+			margin: 5px;
+			float: left;
+			border: 1px solid #ccc;
+
+		}
+
+		.left div{
+			background: #bbffaa;
+		}
+		.right div{
+			background: yellow;
+		}
+		
+	</style>
+</head>
+<body>
+	<h2>动态创建元素节点</h2>
+	<button>点击通过jquery动态创建元素节点</button>
+	<script src="jquery-3.1.1.min.js"></script>></script>
+	<script>
+		var body=$('body');
+		body.on('click',function(){
+			//通过jquery生成div元素节点
+			var div=$("<div class='right'><div class='jx'>动态创建元素节点</div></div>")
+			body.append(div);
+		});
+		
+		 // var body = document.querySelector('body');
+
+    // document.addEventListener('click',function(){
+
+    //  //创建2个div元素
+    //  var rightdiv = document.createElement('div')
+    //  var rightaaron = document.createElement("div");
+
+    //  //给2个div设置不同的属性
+    //  rightdiv.setAttribute('class', 'right')
+    //  rightaaron.className = 'aaron'
+    //  rightaaron.innerHTML = "动态创建DIV元素节点";
+
+    //  //2个div合并成包含关系
+    //  rightdiv.appendChild(rightaaron)
+
+    //  //绘制到页面body
+    //  body.appendChild(rightdiv)
+
+    // },false)
+	</script>
+
+	
+</body>
+</html>
