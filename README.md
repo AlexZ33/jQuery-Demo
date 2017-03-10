@@ -16,7 +16,7 @@
 
 ###新手导航
 ####jQuery实现
-![扫一扫](dist/novice-nav2.png)<br>
+![扫一扫](dist/novice-nav2.png)
 [新手导航——jquery](https://alexz33.github.io/jQuery-Demo/新手导航/index_JQ.html)
 
 
@@ -30,7 +30,7 @@
  jQuery
 
 
- ## License
+## License
 
 MIT
 
