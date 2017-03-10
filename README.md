@@ -16,11 +16,12 @@
 
 ###新手导航
 ####jQuery实现
-![扫一扫](dist/novice-nav2.png)
+![扫一扫](dist/novice-nav2.png)<br>
 [新手导航——jquery](https://alexz33.github.io/jQuery-Demo/新手导航/index_JQ.html)
 
-![扫一扫](dist/novice-nav.png)
+
 ####原生javascript实现
+![扫一扫](dist/novice-nav.png)
 [新手导航——js](https://alexz33.github.io/jQuery-Demo/新手导航/index_js.html)
 
 
