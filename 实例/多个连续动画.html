@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多规格连续动画</title>
+	<script src="jquery-3.1.1.min.js"></script>
+	<style type="text/css" media="screen">
+	#book1{
+		width: 50px;
+		height: 50px;
+		position: relative;
+		background: red;
+	
+		left: 5px;
+	}
+
+	#book2{
+		width: 50px;
+		height: 50px;
+		position: relative;
+		background: yellow;
+		top: 100px;
+		left:5px;
+	}
+
+	
+		
+	</style>
+
+	<script>
+		$(function(){
+			//.animate(properties[,duration][,easing][,complete])
+			$('#clickme').click(function(){
+				$('#book1').animate({
+					left:'+=100px'
+				},1000,function(){
+					$('#book2').animate({
+						left:'+=100px',
+					},2000)
+				})
+
+			})
+			
+		});
+
+		// $('#book1')
+// 	.animate({
+// 		left: '100px'
+// 	}, 1000)
+// 	.animate({
+// 		width: '200px',
+// 		height: '200px'
+// 	}, 3000)
+//})
+	</script>
+
+</head>
+<body>
+	<button id="clickme" type="button">点我</button>
+	<img id="book1"></img>
+	<img id="book2"></img>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>信息列表布局</title>
+	<style>
+	*{margin: 0;padding:0;}
+	body{
+		font-family: "微软雅黑";font-size: 14px;
+	}
+	#box{height: auto;width: 550px;border: 1px solid #aaa;
+		margin: 0 auto;}
+	.top{height: 40px;}
+	.top .siderlist .cur{color:#00a1d6;border-bottom-color: #00a1d6;cursor: pointer;line-height: 12px;background: url(images/icons.png) no-repeat;
+	}
+	.top .siderlist .cur:after{    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border: 3px solid #00a1d6;
+    border-bottom-style: solid;
+    border-top: 0;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;}
+	.top a {
+		height: 16px;width: 16px;display: block;float: right;margin: 5px; 
+	}	
+	.btn-list-off{
+		background: #fff url(images/btns.jpg) no-repeat -38px 0px
+	}
+	.btn-list-card{
+		background: #fff url(images/btns.jpg) no-repeat -21px -34px
+	}
+	
+	.btn-card-off{background: #fff url(images/btns.jpg) no-repeat -21px -0px}
+	
+	.btn-card-on{background: #fff url(images/btns.jpg) no-repeat -38px -32px}
+
+	ul{list-style: none;border:1px solid #aaa; overflow: hidden}
+	#box ul li{height: auto;width: 
+		164px;border:1px solid #aaa;float: left;margin: 5px;}
+/* 	.con img{height: 164px;width: 164px; }
+ */	p{margin-left: 60px;
+}
+	p a,p span{
+		display: block;
+		line-height: 20px;
+		padding-left: 10px;
+		text-decoration: none;
+
+	}
+	.small{height: 50px;width: 50px; display: block;float: left;position: relative; }
+	.small img{margin:5px 5px;}
+	.bottom{height:40px;line-height: 40px;text-align: center;background: #ccc; }
+	</style>
+	
+</head>
+<body>
+	<div id="box">
+		<div class="top">
+			<ul class="slider-list" style="width: 60px;opacity: 1;margin-left: 0px; float: left;">
+				<li class="cur" style="margin-right: 0px;">
+					"同学"
+				::after
+				</li>
+			</ul>
+			<a href="" title="列表模式" class="btn-card-off"></a>
+			<a href="" title="卡片模式" class="btn-card-on"></a>
+		</div>
+		
+		<ul>
+			<li>
+				<div class="con">
+				<a href="" title="" class="small">
+					<img src="images/small.jpg" alt="" >
+				</a>
+					<p>
+						<a href="" title="">白阳</a>
+						<span>辽宁</span>
+						<span>21个共同好友</span>
+					</p>
+				</div>
+				<div class="bottom">
+					未分组的好友
+				</div>
+			</li>
+
+			<li>
+				<div class="con">
+				<a href="" title="" class="small">
+					<img src="images/small.jpg" alt="" >
+				</a>
+					<p>
+						<a href="" title="">白阳</a>
+						<span>辽宁</span>
+						<span>21个共同好友</span>
+					</p>
+				</div>
+				<div class="bottom">
+					未分组的好友
+				</div>
+			</li>	
+
+				<li>
+				<div class="con">
+				<a href="" title="" class="small">
+					<img src="images/small.jpg" alt="" >
+				</a>
+					<p>
+						<a href="" title="">白阳</a>
+						<span>辽宁</span>
+						<span>21个共同好友</span>
+					</p>
+				</div>
+				<div class="bottom">
+					未分组的好友
+				</div>
+			</li>
+
+				<li>
+				<div class="con">
+				<a href="" title="" class="small">
+					<img src="images/small.jpg" alt="" >
+				</a>
+					<p>
+						<a href="" title="">白阳</a>
+						<span>辽宁</span>
+						<span>21个共同好友</span>
+					</p>
+				</div>
+				<div class="bottom">
+					未分组的好友
+				</div>
+			</li>
+
+				<li>
+				<div class="con">
+				<a href="" title="" class="small">
+					<img src="images/small.jpg" alt="" >
+				</a>
+					<p>
+						<a href="" title="">白阳</a>
+						<span>辽宁</span>
+						<span>21个共同好友</span>
+					</p>
+				</div>
+				<div class="bottom">
+					未分组的好友
+				</div>
+			</li>
+
+			<li>
+				<div class="con">
+				<a href="" title="" class="small">
+					<img src="images/small.jpg" alt="" >
+				</a>
+					<p>
+						<a href="" title="">白阳</a>
+						<span>辽宁</span>
+						<span>21个共同好友</span>
+					</p>
+				</div>
+				<div class="bottom">
+					未分组的好友
+				</div>
+			</li>			
+		</ul>
+
+
+	</div>
+
+</body>
+</html>
