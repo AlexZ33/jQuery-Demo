@@ -8,8 +8,8 @@
 html{ height:100%}
 body{ background:url(images/body.png) center top; height:100%}
 #mask{ height:100%; width:100%; background:#000; opacity:0.5; filter:alpha(opacity=50); position:absolute; left:0; top:0; display:none}
-#searchTip{ width:980px; height:800px; margin:0 auto; position:relative; display:none}
-#searchTip div{ position:absolute; display:none }
+#searchTip{ width:980px; height:800px; margin:0 auto; position:relative; }
+#searchTip div{ position:absolute;  }
 #searchTip div a{ position:absolute;width:96px; height:32px; cursor:pointer; text-indent:-999px; overflow:hidden}
 #searchTip div span{cursor:pointer; position:absolute; width:30px; height:30px;text-indent:-999px; overflow:hidden}
 .stepA{ background:url(images/guide11.png); height:329px; width:745px; top:130px; left:-9px; display:block}
@@ -27,41 +27,43 @@ body{ background:url(images/body.png) center top; height:100%}
 .stepE{ background:url(images/guide51.png); width:397px; height:342px;top:79px; left:250px}
 .stepE a{top:245px; left:153px;}
 </style>
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-<script type="text/javascript">
-$(function(){
+<script>
+window.onload=function(){
+	var oMask=document.getElementById('mask');
+	var oSearch=document.getElementById('searchTip');	
+	var aStep=oSearch.getElementsByTagName('div');
+
 	//读取cookie
 	var res=document.cookie.substring(5);
-	alert("当前cookies="+"("+res+")");
-	
-	//判断是否来过
-	if(res!="www.jxdxsw.com"){
-		alert("没有登录过");
+	alert(res);
+
+	if(res!="www.open.com.cn"){
+		alert(res);
+		oMask.style.display=oSearch.style.display=aStep[0].style.display="block";
 		
-
-		$('#mask, #searchTip, #searchTip div:eq(0)' ).show();
-		$('#searchTip div a').click(function(){
-			var currentStep=$(this).parent();
-			currentStep.hide();
-			currentStep.next().show();
-		})
-
-		$('#searchTip div a:last, #searchTip div span').click(function(){
-			$('#mask, #searchTip').hide();
-		})
-		//添加cookie
-		var oDate=new Date();
-		oDate.setDate(oDate.getDate()+30);
-		document.cookie="name=www.jxdxsw.com;expires="+oDate;
+		for( var i=0; i<aStep.length; i++){
+			(function(index){
+				aStep[i].onclick=function(){
+				this.style.display="none";
+				if(index<aStep.length-1){
+					aStep[index+1].style.display="block";
+				 }
+				 else if(index==aStep.length-1){
+					oMask.style.display="none";
+					this.style.display=oSearch.style.display="none";
+				}
+			 }
+			})(i)	
+		}
+		
+	//定义cookie
+	/*var oDate=new Date();
+	oDate.setDate(oDate.getDate()+30);
+	document.cookie="name=www.open.com.cn;expires="+oDate;*/
 	}
+}
 
-
-})
 </script>
-
-
-
-
 
 </head>
 
