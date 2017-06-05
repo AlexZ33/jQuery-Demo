@@ -2,7 +2,8 @@
 
 [写jQuery插件](http://www.cnblogs.com/jonyzhu/p/3732468.html)
 
-[什么？你还不会写JQuery 插件](http://www.cnblogs.com/joey0210/p/3408349.html)# 闭包
+[什么？你还不会写JQuery 插件](http://www.cnblogs.com/joey0210/p/3408349.html)
+# 闭包
 
 利用闭包的特性，既可以避免内部临时变量影响全局空间，又可以在插件内部继续使用$作为jQuery的别名。
 ```
@@ -19,6 +20,29 @@
     //插入内部代码
 	//可以使用$作为jQuery的缩写别名
 })(jQuery);//这里将jQuery作为实参传递给匿名函数
+
+```
+
+```
+;(function($) {
+   //这里编写插件的代码，可以继续使用$作为jQuery的别名。
+   //定义一个局部变量foo,仅函数内部可以访问，外部无法访问
+   var foo;
+   var bar = function() {
+   /* 在匿名函数内部的函数都可以访问foo，
+   *即便是在匿名函数的外部调用bar()的时候，
+   *也可以在bar()的内部访问foo,
+   *但在匿名函数的外部直接访问foo是做不到的*/
+   
+   }
+   
+   /* 下面的语句让匿名函数内部的函数bar()逃逸到全局可访问的范围内，
+   *这样就可以在匿名函数的外部通过调用jQuery.BAR()来访问内部定义的函数bar(),
+   *并且内部函数bar()也能访问匿名函数的变量foo
+   */
+   $.BAR = bar;
+   
+})(jQuery);
 
 ```
 
