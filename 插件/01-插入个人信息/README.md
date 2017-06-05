@@ -2,15 +2,25 @@
 
 [写jQuery插件](http://www.cnblogs.com/jonyzhu/p/3732468.html)
 
-# 闭包
+[什么？你还不会写JQuery 插件](http://www.cnblogs.com/joey0210/p/3408349.html)# 闭包
 
-
+利用闭包的特性，既可以避免内部临时变量影响全局空间，又可以在插件内部继续使用$作为jQuery的别名。
 ```
 (function ($) {
     //插入内部代码
 })(jQuery);
 ```
 这其实是一个匿名的立即执行函数  jQuery可以用window.jQuery 或 $ 代替
+
+```
+
+// 注意为了更好的兼容性，开始前有个分号
+;(function ($) {
+    //插入内部代码
+	//可以使用$作为jQuery的缩写别名
+})(jQuery);//这里将jQuery作为实参传递给匿名函数
+
+```
 
 # 实例及详解
 
